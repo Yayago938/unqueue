@@ -3,7 +3,7 @@ const axios = require("axios");
 async function fetchLead(leadId) {
   const version = process.env.META_GRAPH_API_VERSION;
 
-  const url = `https://graph.facebook.com/${version}/${encodeURIComponent(leadId)}`;
+  const url = `https://graph.facebook.com/${version}/${leadId}`;
 
   const response = await axios.get(url, {
     params: {

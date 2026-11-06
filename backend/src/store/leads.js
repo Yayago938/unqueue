@@ -9,12 +9,7 @@ function getLead(id) {
 }
 
 function saveLead(lead) {
-  if (leads.has(lead.id)) {
-    return false;
-  }
-
   leads.set(lead.id, lead);
-  return true;
 }
 
 module.exports = {

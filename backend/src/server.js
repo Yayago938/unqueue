@@ -31,6 +31,7 @@ app.use(
   }),
   createWebhookRouter(io)
 );
+
 app.get("/leads", (req, res) => {
   res.json(getAllLeads());
 });
@@ -43,7 +44,7 @@ io.on("connection", (socket) => {
   });
 });
 
-const PORT = Number(process.env.PORT) || 8000;
+const PORT = process.env.PORT || 8000;
 
 httpServer.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
